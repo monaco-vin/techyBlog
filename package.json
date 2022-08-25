@@ -1,6 +1,10 @@
 {
     "name": "techyblog",
     "version": "1.0.0",
+    "engines": {
+        "node": "v16.15.0",
+        "npm": "8.5.5"
+      },
     "description": "A CMS style blog similar to a Wordpress site, where developers can publish their blog posts and comment on other posts as well. Following the MVC paradigm, using handlebars, and sequelize.",
     "main": "server.js",
     "scripts": {

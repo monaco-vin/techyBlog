@@ -33,6 +33,6 @@ app.use(routers);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(process.env.PORT || 3001, "0.0.0.0", () => {
-    console.log("Server is running.");
+    console.log(`Server is running on http://localhost:${PORT}`);
   });
 });

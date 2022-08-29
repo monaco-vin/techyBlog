@@ -10,29 +10,29 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 //set up our session
-const sess = {
-  secret: "placeholder",
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
-};
-//set up handlebars
-const hbs = exphbs.create();
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
-//set up our session
-app.use(session(sess));
-//standard middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
-//set up our routing
-app.use(routers);
+// const sess = {
+//   secret: "placeholder",
+//   resave: false,
+//   saveUninitialized: true,
+//   store: new SequelizeStore({
+//     db: sequelize,
+//   }),
+// };
+// //set up handlebars
+// const hbs = exphbs.create();
+// app.engine("handlebars", hbs.engine);
+// app.set("view engine", "handlebars");
+// //set up our session
+// app.use(session(sess));
+// //standard middlewares
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.static(path.join(__dirname, "public")));
+// //set up our routing
+// app.use(routers);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(process.env.PORT || 3001, "0.0.0.0", () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-  });
-});
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(process.env.PORT || 3001, "0.0.0.0", () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+//   });
+// });

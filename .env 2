@@ -1,0 +1,3 @@
+DB_NAME='techyblog_db'
+DB_USER='root'
+DB_PASSWORD=''
